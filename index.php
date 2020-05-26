@@ -1,8 +1,8 @@
 <html>
 <body>
 <form action="" method="post">
-<input name="name" type="text" value="">
-<input name="pass" type="password" value="">
+<input name="name" id="name" type="text" value="">
+<input name="pass" id="pass" type="password" value="">
 <input name="tag" type="hidden" value="1">
 <input type="submit" value="submit">
 </form>
