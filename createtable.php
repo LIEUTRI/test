@@ -24,3 +24,4 @@ function pg_connection_string_from_database_url() {
    }
    pg_close($db);
 ?>
+<br><a href=index.php>HOME</a>
