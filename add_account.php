@@ -1,16 +1,17 @@
 <!DOCUMENT HTML>
-	<html>
-		<header>
+<html>
+<header>
 	<style>
-				.error {color: #FF0000;}
-			</style>
-		</header>
+		.error {color: #FF0000;}
+	</style>
+</header>
 <body>
-	<h2>PHP Form Validation Example</h2>
+	<h2>TEST</h2>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] );?>">
-	UserName: <input type="text" name="username" value="<?php echo $username;?>"> <br>
-	Password: <input type="text" name="password" value="<?php echo $password;?>"> <br>
-	<input type="Submit" name="Submit" value="Submit">
+	UserName: <input type="text" name="username" value="<?php echo $username;?>"/> <br>
+	Password: <input type="text" name="password" value="<?php echo $password;?>"/> <br>
+	<input type="hidden" name="tag" value="1"/>	
+	<input type="Submit" name="Submit" value="Submit"/>
 	</form>
 <?php
 $username=$_POST["username"];
@@ -27,11 +28,14 @@ if (!$db){
 }
 $sql ="INSERT INTO users (name, pass) VALUES ('$username', '$password')";
 print "<br>$sql</br>";
-$ret = pg_query($db, $sql);
-if(!$ret){
-	echo pg_last_error($db);
-} else {
-	echo "Insert successfully\n";
+
+if($_POST['tag']==1){
+	$ret = pg_query($db, $sql);
+	if(!$ret){
+		echo pg_last_error($db);
+	} else {
+		echo "Insert successfully\n";
+	}
 }
 pg_close($db);
 ?>
