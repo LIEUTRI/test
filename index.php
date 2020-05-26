@@ -25,3 +25,9 @@ if($_POST['tag'] == 1){
 	else echo "Chao ban, ".$name.". Pass cua ban la: ".$pass;
 }
 ?>
+
+  <br> <a href=setup.php>Create Database</a>
+  <br> <a href=createtable.php>Create Table</a>
+  <br> <a href=add_account.php>Add account</a>
+  <br> <a href=list_account.php>Account List</a>
+
