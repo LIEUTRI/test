@@ -22,6 +22,6 @@ $name = $_POST['name'];
 $pass = $_POST['pass'];
 if($_POST['tag'] == 1){
 	if(empty($name)) echo "Xin chao, nguoi la!";
-	else "Chao ban, ".$name.". Pass cua ban la: ".$pass;
+	else echo "Chao ban, ".$name.". Pass cua ban la: ".$pass;
 }
 ?>
