@@ -8,8 +8,8 @@
 <body>
 	<h2>TEST</h2>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] );?>">
-	UserName: <input type="text" name="username" value="<?php echo $username;?>"/> <br>
-	Password: <input type="text" name="password" value="<?php echo $password;?>"/> <br>
+	Username: <input type="text" name="username" value="<?php echo $username;?>"/> <br>
+	Password: <input type="password" name="password" value="<?php echo $password;?>"/> <br>
 	<input type="hidden" name="tag" value="1"/>	
 	<input type="Submit" name="Submit" value="Submit"/>
 	</form>
