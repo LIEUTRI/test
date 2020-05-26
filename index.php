@@ -30,4 +30,4 @@ if($_POST['tag'] == 1){
   <br> <a href=createtable.php>Create Table</a>
   <br> <a href=add_account.php>Add account</a>
   <br> <a href=list_account.php>Account List</a>
-
+  <br> <a href=delete.php>Delete Accounts</a>
