@@ -25,7 +25,7 @@ if (!$db){
 
 if($_POST['tag']==1){
 $name = $_POST['name'];
-$sql = "DELETE * FROM users WHERE name='".$name."'";
+$sql = "DELETE FROM users WHERE name='".$name."'";
 print "<br>$sql<br>";
 $ret = pg_query($db, $sql);
 if(!$ret){
