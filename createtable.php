@@ -11,11 +11,10 @@ function pg_connection_string_from_database_url() {
    }
    
    $sql =<<<EOF
-      CREATE TABLE COMPANY2
-      (ID INT PRIMARY KEY     NOT NULL,
-      NAME           TEXT,
-      PASS	     TEXT)
-EOF;
+      CREATE TABLE users
+      (NAME           TEXT,
+       PASS	      TEXT)
+   EOF;
 
    $ret = pg_query($db, $sql);
    if(!$ret){
