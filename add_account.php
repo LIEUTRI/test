@@ -25,7 +25,7 @@ if (!$db){
 } else {
 	echo "Opened database successfully\n";
 }
-$sql ="INSERT INTO users (username, password) VALUES ('$username', '$password')";
+$sql ="INSERT INTO users (name, pass) VALUES ('$username', '$password')";
 print "<br>$sql</br>";
 $ret = pg_query($db, $sql);
 if(!$ret){
