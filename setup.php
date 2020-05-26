@@ -19,3 +19,4 @@ if(!$ret){
 }
 pg_close($db);
 ?>
+<a href=index.php>HOME</a>
