@@ -30,7 +30,6 @@ if($_POST['tag']==1){
 	$ret = pg_query($db, $sql);
 	if(!$ret){
 		echo pg_last_error($db);
-		exit();
 	} else echo $name." was deleted!";
 }
 ?>
