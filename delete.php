@@ -6,10 +6,11 @@
 </style>
 </header>
 <body>
+<form action="" method="post">
 <input type="text" name="name" id="name"/>
 <input type="hidden" name="tag" value="1"/>
 <input type="submit" value="DELETE">
-
+</form>
 <?php
 function pg_connection_string_from_database_url() {
 	extract (parse_url($_ENV["DATABASE_URL"] ));
