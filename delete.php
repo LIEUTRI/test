@@ -6,7 +6,7 @@
 </style>
 </header>
 <body>
-<input type="text" name="name"/>
+<input type="text" name="name" id="name"/>
 <input type="hidden" name="tag" value="1"/>
 <input type="submit" value="DELETE">
 
@@ -22,9 +22,10 @@ if (!$db){
 	echo "Opened database successfully\n";
 }
 
+$sql = "DELETE * FROM users WHERE name=".$name."";
+
 if($_POST['tag']==1){
 $name = $_POST['name'];
-$sql = "DELETE * FROM users WHERE name=".$name."";
 print "<br>$sql<br>";
 $ret = pg_query($db, $sql);
 if(!$ret){
